@@ -1,0 +1,17 @@
+:root {
+  --color-navy: #001f33;
+  --color-navy-deep: #001725;
+  --color-sand: #f4d8a8;
+  --color-white: #ffffff;
+  --color-blue: #2f78ad;
+  --color-blue-soft: #7fb4c0;
+  --color-header-solid: rgba(0, 23, 37, 0.96);
+  --shadow-soft: 0 18px 50px rgba(0, 31, 51, 0.18);
+  --shadow-header: 0 18px 45px rgba(0, 23, 37, 0.2);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --header-height: 96px;
+  --container: 1120px;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+}

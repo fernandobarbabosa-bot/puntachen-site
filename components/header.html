@@ -1,0 +1,45 @@
+<header class="site-header" data-site-header>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="{{ROOT}}index.html" aria-label="Grupo Punta Chen">
+      <img
+        class="site-header__logo"
+        src="{{ROOT}}assets/logos/logo-grupo-punta-chen.jpg"
+        alt="Grupo Punta Chen"
+        width="96"
+        height="96"
+      >
+    </a>
+
+    <button
+      class="site-header__toggle"
+      type="button"
+      aria-label="Abrir menu de navegacion"
+      aria-controls="site-navigation"
+      aria-expanded="false"
+      data-menu-toggle
+    >
+      <span class="site-header__toggle-line"></span>
+      <span class="site-header__toggle-line"></span>
+      <span class="site-header__toggle-line"></span>
+    </button>
+
+    <nav
+      class="site-header__nav"
+      id="site-navigation"
+      aria-label="Navegacion principal"
+      aria-hidden="true"
+      inert
+      data-site-nav
+    >
+      <ul class="site-header__nav-list">
+        <li><a class="site-header__nav-link" href="{{ROOT}}index.html">Inicio</a></li>
+        <li><a class="site-header__nav-link" href="{{PAGES}}infraestructura.html">Infraestructura</a></li>
+        <li><a class="site-header__nav-link" href="{{PAGES}}cooperativa.html">Cooperativa</a></li>
+        <li><a class="site-header__nav-link" href="{{PAGES}}purificadora.html">Purificadora</a></li>
+        <li><a class="site-header__nav-link" href="{{PAGES}}contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
