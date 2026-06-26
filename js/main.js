@@ -70,7 +70,21 @@ const initHeader = () => {
   });
 
   nav.addEventListener("click", (event) => {
-    if (event.target.closest("a")) {
+    const clickedAnchor = event.target.closest("a");
+    const clickedNavPanel = event.target.closest(".site-header__nav-panel");
+
+    if (clickedAnchor) {
+      closeNavigation(header, nav, toggle);
+      return;
+    }
+
+    if (event.target === nav || !clickedNavPanel) {
+      closeNavigation(header, nav, toggle);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.matchMedia("(min-width: 1024px)").matches && toggle.getAttribute("aria-expanded") === "true") {
       closeNavigation(header, nav, toggle);
     }
   });

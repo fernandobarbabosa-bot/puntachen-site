@@ -10,8 +10,22 @@
   --shadow-header: 0 18px 45px rgba(0, 23, 37, 0.2);
   --radius-lg: 28px;
   --radius-md: 18px;
-  --header-height: 96px;
-  --container: 1120px;
+  --header-height: 72px;
+  --container: 1200px;
+  --content-gap: 24px;
+
+  /* Fonts */
   --font-serif: Georgia, "Times New Roman", serif;
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+
+  /* Spacing */
+  --space-xxs: 6px;
+  --space-xs: 12px;
+  --space-sm: 18px;
+  --space-md: 28px;
+  --space-lg: 48px;
+  --space-xl: 72px;
+
+  /* Shadows */
+  --shadow-elevate: 0 10px 30px rgba(0, 23, 37, 0.28);
 }
