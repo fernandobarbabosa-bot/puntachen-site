@@ -1,35 +1,36 @@
 const componentNodes = document.querySelectorAll("[data-component]");
 
+// Detecta automáticamente la ruta base del sitio
+const isGitHubPages =
+  window.location.hostname.endsWith("github.io") &&
+  window.location.pathname.startsWith("/puntachen-site/");
+
+const siteRoot = isGitHubPages ? "/puntachen-site/" : "/";
+
+const isNestedPage = window.location.pathname.includes("/pages/");
+const rootPath = isNestedPage ? "../" : "";
+const pagePath = isNestedPage ? "" : "pages/";
+
 const loadComponent = async (node) => {
   const componentName = node.dataset.component;
-  const isNestedPage = window.location.pathname.includes("/pages/");
-  const rootPath = isNestedPage ? "../" : "";
-  const pagePath = isNestedPage ? "" : "pages/";
+
   const componentPath = `${rootPath}components/${componentName}.html`;
 
   try {
     const response = await fetch(componentPath);
 
-    if (!response.ok) {
-      return;
-    }
+    if (!response.ok) return;
 
     const componentMarkup = await response.text();
+
     node.innerHTML = componentMarkup
       .replaceAll("{{ROOT}}", rootPath)
-      .replaceAll("{{PAGES}}", pagePath);
+      .replaceAll("{{PAGES}}", pagePath)
+      .replaceAll("{{SITE_ROOT}}", siteRoot);
+
   } catch (error) {
     console.warn(`No se pudo cargar el componente ${componentName}.`, error);
   }
-};
-
-const setHeaderState = (header) => {
-  header.classList.toggle("is-scrolled", window.scrollY > 8);
-};
-
-const setNavigationAccess = (nav, isAccessible) => {
-  nav.toggleAttribute("inert", !isAccessible);
-  nav.setAttribute("aria-hidden", String(!isAccessible));
 };
 
 const initHeader = () => {
