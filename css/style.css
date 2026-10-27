@@ -254,7 +254,7 @@ main {
   position: relative;
   display: grid;
   min-height: 640px;
-  margin-top: calc(-1 * var(--header-height));
+  margin-top: 0;
   overflow: hidden;
   background: var(--color-navy-deep);
 }
