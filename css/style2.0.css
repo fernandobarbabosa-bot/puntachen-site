@@ -1,4 +1,4 @@
-body {
+sbody {
   background: var(--color-navy);
   color: var(--color-white);
   font-family: var(--font-sans);
@@ -76,7 +76,7 @@ main {
 }
 
 .page-hero--purificadora .page-hero__media {
-  background-image: url("../assets/images/hielo.png");
+  background-image: url("../assets/images/hielera.jpg");
 }
 
 .page-hero--cooperativa .page-hero__media {
